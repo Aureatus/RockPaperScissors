@@ -1,3 +1,4 @@
+
 function computerPlay() {
     let options = ["Rock", "Paper" , "Scissors"]
     let randomnumber = (Math.random()*3)
@@ -58,7 +59,78 @@ function playRound(computerSelection, playerSelection) {
     }
 }
 
-function game() {
+// TextAddition
+const scoreDiv = document.createElement('div')
+const resultsDiv = document.createElement('div')
+const body = document.body
+body.appendChild(scoreDiv)
+scoreDiv.classList.add("score")
+body.appendChild(resultsDiv)
+resultsDiv.classList.add("results")
+
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorsBtn = document.querySelector("#scissors");
+
+rockBtn.addEventListener("click", () => {
+    playerSelection = "Rock"
+    computerSelection = computerPlay();
+    playRound(computerSelection, playerSelection)
+    scoreDiv.textContent = 
+    "Player score is: " + (playerScore) + " " +
+    "Computer score is: "+ (computerScore);
+    if (playerScore == 5) {
+        resultsDiv.textContent =
+        "The player wins with " + playerScore + 
+        " points , whilst the computer only had" + computerScore + " points" 
+    }
+    else if (computerScore == 5) {
+        resultsDiv.textContent =
+        "The computer wins with " + computerScore + 
+        " points , whilst the player only had" + playerScore + " points"
+    };
+});
+
+paperBtn.addEventListener("click", () => {
+    playerSelection = "Paper"
+    computerSelection = computerPlay();
+    playRound(computerSelection, playerSelection)
+    scoreDiv.textContent = 
+    "Player score is: " + (playerScore) + " " +
+    "Computer score is: "+ (computerScore);
+    if (playerScore == 5) {
+        resultsDiv.textContent =
+        "The player wins with " + playerScore + 
+        " points , whilst the computer only had" + computerScore + " points" 
+    }
+    else if (computerScore == 5) {
+        resultsDiv.textContent =
+        "The computer wins with " + computerScore + 
+        " points , whilst the player only had" + playerScore + " points"
+    };
+});
+
+scissorsBtn.addEventListener("click", () => {
+    playerSelection = "Scissors"
+    computerSelection = computerPlay();
+    playRound(computerSelection, playerSelection)
+    scoreDiv.textContent = 
+    "Player score is: " + (playerScore) + " " +
+    "Computer score is: "+ (computerScore);
+    if (playerScore == 5) {
+        resultsDiv.textContent =
+        "The player wins with " + playerScore + 
+        " points , whilst the computer only had" + computerScore + " points" 
+    }
+    else if (computerScore == 5) {
+        resultsDiv.textContent =
+        "The computer wins with " + computerScore + 
+        " points , whilst the player only had" + playerScore + " points"
+    };
+});
+
+
+/*function game() {
     for( let i = 0; i < 5; i++ ) {
         playerInput = prompt("Please enter Rock, Paper or Scissors.");
         playerSelection = caseInsensitivty(playerInput);
@@ -80,3 +152,4 @@ function game() {
 }
 
 console.log(game())
+*/
