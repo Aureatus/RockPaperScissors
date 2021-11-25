@@ -82,12 +82,12 @@ rockBtn.addEventListener("click", () => {
     if (playerScore == 5) {
         resultsDiv.textContent =
         "The player wins with " + playerScore + 
-        " points , whilst the computer only had" + computerScore + " points" 
+        " points , whilst the computer only had " + computerScore + " points" 
     }
     else if (computerScore == 5) {
         resultsDiv.textContent =
         "The computer wins with " + computerScore + 
-        " points , whilst the player only had" + playerScore + " points"
+        " points , whilst the player only had " + playerScore + " points"
     };
 });
 
