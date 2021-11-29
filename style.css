@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    background-color:blanchedalmond;
+}
+
+h1 {
+    font-size: 40px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(221, 160, 221);
+    text-shadow:black 1.5px 1.5px;
+    text-align: center;
+    font-style: italic;
+
+}
+div.container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rosybrown;
+    border-radius: 500px;
+    gap: 30px;
+    margin: 100px;
+}
+
+div.buttons {
+
+}
+div.buttons button{
+    background-color:thistle;
+    border-radius: 100%;
+    border-color: cornflowerblue;
+    border-width: 5px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    font-size: 18px;
+    font-family:monospace;
+    text-shadow:oldlace 1.5px 1.5px;
+}
+div.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:lemonchiffon;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 14px;
+    font-family:monospace;
+    text-shadow: lightsalmon 0.5px 0.5px;
+}
+
+div.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    width: 250px;
+    height: 120px;
+    text-align: center;
+    background-color:ivory;
+    color: rgba(0, 0, 0, 0.815);
+    text-shadow:rgb(221, 160, 221) 0.5px 0.5px;
+    font-size: 18px;
+    font-family:monospace;
+    font-weight: 550;
+}

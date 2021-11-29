@@ -63,11 +63,15 @@ function playRound(computerSelection, playerSelection) {
 const scoreDiv = document.createElement('div')
 const resultsDiv = document.createElement('div')
 const body = document.body
-body.appendChild(scoreDiv)
+const container = document.querySelector(".container")
+container.appendChild(scoreDiv)
 scoreDiv.classList.add("score")
-body.appendChild(resultsDiv)
+scoreDiv.textContent = 
+    ("Player score is: " + (playerScore) + " " +
+    "Computer score is: "+ (computerScore));
+container.appendChild(resultsDiv)
 resultsDiv.classList.add("results")
-
+resultsDiv.textContent = "Results will appear when either player reaches 5 points."
 const rockBtn = document.querySelector("#rock");
 const paperBtn = document.querySelector("#paper");
 const scissorsBtn = document.querySelector("#scissors");
@@ -82,12 +86,12 @@ rockBtn.addEventListener("click", () => {
     if (playerScore == 5) {
         resultsDiv.textContent =
         "The player wins with " + playerScore + 
-        " points , whilst the computer only had " + computerScore + " points" 
+        " points,whilst the computer only had " + computerScore + " points" 
     }
     else if (computerScore == 5) {
         resultsDiv.textContent =
         "The computer wins with " + computerScore + 
-        " points , whilst the player only had " + playerScore + " points"
+        " points,whilst the player only had " + playerScore + " points"
     };
 });
 
@@ -101,12 +105,12 @@ paperBtn.addEventListener("click", () => {
     if (playerScore == 5) {
         resultsDiv.textContent =
         "The player wins with " + playerScore + 
-        " points , whilst the computer only had" + computerScore + " points" 
+        " points,whilst the computer only had" + computerScore + " points" 
     }
     else if (computerScore == 5) {
         resultsDiv.textContent =
         "The computer wins with " + computerScore + 
-        " points , whilst the player only had" + playerScore + " points"
+        " points,whilst the player only had" + playerScore + " points"
     };
 });
 
@@ -120,12 +124,12 @@ scissorsBtn.addEventListener("click", () => {
     if (playerScore == 5) {
         resultsDiv.textContent =
         "The player wins with " + playerScore + 
-        " points , whilst the computer only had" + computerScore + " points" 
+        " points,whilst the computer only had" + computerScore + " points" 
     }
     else if (computerScore == 5) {
         resultsDiv.textContent =
         "The computer wins with " + computerScore + 
-        " points , whilst the player only had" + playerScore + " points"
+        " points,whilst the player only had" + playerScore + " points"
     };
 });
 
